@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <section class="header">
+        <div class="header-tittle">
+          Iniciar sesión o <span><a href="#">Registrarse</a></span>
+        </div>
+        <div class="header-accounts">
+          <div class="social-accounts facebook">Facebook</div>
+          <div class="social-accounts twitter">Twitter</div>
+          <div class="social-accounts google">Google+</div>
+        </div>
+      </section>
+      <section class="main">
+        <div class="data">
+          <div class="btn-data">
+            <i class="fas fa-user"></i>
+            <input
+              type="text"
+              class="user"
+              placeholder="Usuario o correo electrónico"
+              oninput="typeButton()"
+            />
+            <div id="close-icon-user" class="close-icon-user">
+              <i class="fas fa-times"></i>
+            </div>
+          </div>
+          <div class="btn-data">
+            <i class="fas fa-lock"></i>
+            <input
+              id="close-icon-btn"
+              type="text"
+              class="password"
+              placeholder="Contraseña"
+              oninput="typeButton2()"
+            />
+            <div id="close-icon-password" class="close-icon-password">
+              <i class="fas fa-times"></i>
+            </div>
+          </div>
+        </div>
+        <div class="btn-login">Iniciar sesión</div>
+        <div class="remember-forgot">
+          <div class="remember">
+            <input type="checkbox" />
+            <p>Recuerdame</p>
+          </div>
+          <div class="forgot"><a href="#">Olvidó su contraseña?</a></div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+@import "./resets";
+@import "./variables";
+
+@mixin flexbox($jus, $align, $direc) {
+  display: flex;
+  justify-content: $jus;
+  align-items: $align;
+  flex-direction: $direc;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: $font-family;
+  @include flexbox(center, center, row);
+}
+
+a {
+  text-decoration: none;
+  color: $secondary-color;
+}
+
+.container {
+  @include flexbox(center, center, column);
+  height: 50vh;
+  width: 40vw;
+  min-width: 20rem;
+  // background: $form-color;
+  border: 1px solid $main-color;
+  border-radius: 5px;
+}
+
+.header {
+  height: 40%;
+  width: 100%;
+  @include flexbox(center, center, column);
+
+  &-tittle {
+    height: 40%;
+    width: 100%;
+    font-size: $font-size;
+    @include flexbox(center, flex-end, row);
+  }
+
+  &-accounts {
+    width: 100%;
+    height: 50%;
+    @include flexbox(space-evenly, center, row);
+    // background-color: blue;
+  }
+}
+
+.social-accounts {
+  width: 20%;
+  min-width: 6rem;
+  height: 2rem;
+  font-size: $font-size;
+  border-radius: 3px;
+  color: white;
+  @include flexbox(center, center, row);
+  cursor: pointer;
+}
+
+.facebook {
+  background-color: $color-facebook;
+}
+
+.twitter {
+  background: $color-twitter;
+}
+
+.google {
+  background: $color-google;
+}
+
+.data {
+  // @include flexbox(center, center, column);
+  width: 100%;
+  background-color: blue;
+}
+.btn-data {
+  @include flexbox(space-evenly, center, row);
+  width: 70%;
+  height: 2rem;
+  // background-color: blue;
+  margin: 0.6rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.data input {
+  width: 80%;
+  font-size: 12px;
+  outline: none;
+}
+
+.btn-data i {
+  // width: 20%;
+  opacity: 0.7;
+  // margin: 0 15px;
+  // font-size: 1.rem;
+}
+.btn-login {
+  width: 70%;
+  height: 2rem;
+  background: $secondary-color;
+}

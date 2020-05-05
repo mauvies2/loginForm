@@ -22,12 +22,12 @@ a {
 
 .container {
   @include flexbox(center, center, column);
-  height: 50vh;
   width: 40vw;
-  min-width: 20rem;
+  min-width: 25rem;
   // background: $form-color;
   border: 1px solid $main-color;
-  border-radius: 5px;
+  border-radius: $border-radius;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
 }
 
 .header {
@@ -36,26 +36,21 @@ a {
   @include flexbox(center, center, column);
 
   &-tittle {
-    height: 40%;
-    width: 100%;
+    padding: 3rem 0 1rem;
     font-size: $font-size;
-    @include flexbox(center, flex-end, row);
   }
 
   &-accounts {
-    width: 100%;
-    height: 50%;
-    @include flexbox(space-evenly, center, row);
-    // background-color: blue;
+    padding: 0.8rem 0;
+    width: 80%;
+    @include flexbox(space-between, center, row);
   }
 }
 
 .social-accounts {
-  width: 20%;
-  min-width: 6rem;
-  height: 2rem;
+  padding: 0.7rem 2.8rem;
   font-size: $font-size;
-  border-radius: 3px;
+  border-radius: $border-radius;
   color: white;
   @include flexbox(center, center, row);
   cursor: pointer;
@@ -72,36 +67,58 @@ a {
 .google {
   background: $color-google;
 }
+.main {
+  @include flexbox(center, center, column);
+  width: 100%;
+}
 
 .data {
-  // @include flexbox(center, center, column);
+  @include flexbox(center, center, column);
   width: 100%;
-  background-color: blue;
+  padding: 1.2rem 0 0.5rem;
+  // background-color: blue;
 }
 .btn-data {
   @include flexbox(space-evenly, center, row);
-  width: 70%;
-  height: 2rem;
+  width: 80%;
+  height: 3rem;
   // background-color: blue;
-  margin: 0.6rem 0;
+  margin: 0.5rem 0;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: $border-radius;
 }
 
 .data input {
   width: 80%;
-  font-size: 12px;
-  outline: none;
+  height: 80%;
+  font-size: 1.2rem;
+  border: none;
+  padding: 0 0.3rem;
 }
 
 .btn-data i {
   // width: 20%;
   opacity: 0.7;
   // margin: 0 15px;
-  // font-size: 1.rem;
+  font-size: 1rem;
 }
 .btn-login {
-  width: 70%;
-  height: 2rem;
+  @include flexbox(center, center, row);
+  width: 80%;
+  height: 3rem;
+  font-size: $font-size;
+  color: white;
   background: $secondary-color;
+  border-radius: $border-radius;
+  cursor: pointer;
+}
+
+.remember-forgot {
+  width: 80%;
+  padding: 0.5rem 0 2.5rem;
+  @include flexbox(space-between, center, row);
+}
+
+.remember {
+  @include flexbox(center, center, row);
 }
